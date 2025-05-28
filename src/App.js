@@ -6,9 +6,11 @@ import CreateTweet from './component/Createtweet.js';
 function App() {
   const name = "John Doe";
   const message = "This is going out of the way";
-  return (
+  const name2 = "Jane Dow";
+    return (
     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'start', height: '100vh'}}>
       <h1 style={{color: 'black', font: 'Poppins'}}>Hello React</h1>
+      <h1>Hello {name2}</h1>
       <CreateTweet /> 
       <Button2 />
       <Tweet name={name} message ={message} />
