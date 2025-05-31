@@ -7,6 +7,9 @@ function App() {
   const name = "John Doe";
   const message = "This is going out of the way";
   const name2 = "Jane Dow";
+  const newmessage = () => {
+    alert("Hello, world from react!");
+  }
     return (
     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'start', height: '100vh'}}>
       <h1 style={{color: 'black', font: 'Poppins'}}>Hello React</h1>
@@ -14,6 +17,7 @@ function App() {
       <CreateTweet /> 
       <Button2 />
       <Tweet name={name} message ={message} />
+      <button onClick={newmessage}>Click me</button>
       <p>Welcome to the world of React!</p>
       <Btn3 />
       <Creategreet />
