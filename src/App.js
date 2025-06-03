@@ -1,18 +1,25 @@
 // import React from 'react';
 // import Tweet from './component/tweet.js';
+import { useState } from 'react';
 import CreateTweet from './component/Createtweet.js';
 import Tweet from './component/tweet.js';
 // import {useState} from 'react';
 
 
 function App() {
-  const name = "Jhonny depp";
-  const message = "I am a pirate";
-  
-  return (
+  // setName
+    const [name] = useState("Jhonny dept");
+    //Use state
+    const [textInput, setInput] = useState('');
+    const [tweets, setTweets] = useState(['']);
+    return (
     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'start', height: '100vh'}}>
-      <CreateTweet /> 
-      <Tweet name={name} message={message} />
+      <CreateTweet textInput={textInput} 
+      setInput={setInput} 
+      tweets={tweets}
+      setTweets={setTweets} 
+    /> 
+      <Tweet name={name} tweets={tweets} />
       <Button2 />
     </div>
   );
@@ -24,11 +31,6 @@ function Button2() {
 
   );
 }
-
-
-
-
-
 
 export default App;
 
